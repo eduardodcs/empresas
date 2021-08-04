@@ -1,31 +1,23 @@
-package br.com.eduardo.empresas.modelo;
+package br.com.eduardo.empresas.dto;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import org.springframework.data.domain.Page;
 
-@Entity
-public class Empresa {
+import br.com.eduardo.empresas.modelo.Empresa;
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+public class EmpresaDto {
+
 	private Long id;
 	private String nome;
 	private String email;
 	private String empresa;
 	private String cnpj;
-
-	public Empresa() {
-	}
-
-	public Empresa(Long id, String nome, String email, String empresa, String cnpj) {
-		super();
-		this.id = id;
-		this.nome = nome;
-		this.email = email;
-		this.empresa = empresa;
-		this.cnpj = cnpj;
+	
+	public EmpresaDto(Empresa empresa) {
+		this.id = empresa.getId();
+		this.nome = empresa.getNome();
+		this.email = empresa.getEmail();
+		this.empresa = empresa.getEmpresa();
+		this.cnpj = empresa.getCnpj();
 	}
 
 	public Long getId() {
@@ -67,5 +59,10 @@ public class Empresa {
 	public void setCnpj(String cnpj) {
 		this.cnpj = cnpj;
 	}
+
+	public static Page<EmpresaDto> converter(Page<Empresa> empresas) {
+		return empresas.map(EmpresaDto::new);
+	}
+
 
 }

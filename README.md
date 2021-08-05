@@ -42,14 +42,14 @@
   - JDK11 ou superior;
   - Eclipse IDE
   - Postman
-  - Git/Github
-- Faça o clone do repositória em sua máquina;
-- Clicando em *File* e *Import*, procure pela opção ***Existing Maven Projects***;
-- Busque pelo local onde foi realizado o clone do repositório;
-- O Maven irá baixar todas as dependências necessárias;
-- Selecione o *EmpresaApplication.java* no package *br.com.eduardo.empresas*, clique com o botão direito e em seguida em ***Run As*** e ***Java Application***;
-- O Eclipse irá subir a aplicação com o TomCat no endereço *localhost* utilizando a porta 8080;
-- Utilize o Postman para realizar as requisições conforme descritas em **Funcionalidades** aqui no README;
+  - Git
+- Faça o clone do repositório em sua máquina;
+- No Eclipse IDE clique em *File* e *Import*, procure pela opção ***Existing Maven Projects***;
+- Busque pelo local onde foi realizado o clone do repositório e *Finish*;
+- O projeto será carregado e o Maven irá baixar todas as dependências necessárias;
+- Selecione a classe *EmpresaApplication.java* no package *br.com.eduardo.empresas*, clique com o botão direito e em ***Run As*** e ***Java Application***;
+- O Eclipse irá subir a aplicação com o servidor TomCat no endereço *localhost* utilizando a porta 8080;
+- Utilize o Postman para realizar as requisições GET conforme descritas em **Funcionalidades** aqui no README;
 
 
 

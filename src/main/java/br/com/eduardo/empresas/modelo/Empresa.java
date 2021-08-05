@@ -19,9 +19,7 @@ public class Empresa {
 	public Empresa() {
 	}
 
-	public Empresa(Long id, String nome, String email, String empresa, String cnpj) {
-		super();
-		this.id = id;
+	public Empresa(String nome, String email, String empresa, String cnpj) {
 		this.nome = nome;
 		this.email = email;
 		this.empresa = empresa;
